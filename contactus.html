@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/main.css">
+  <title> Cake's by Mavia• Home</title>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <img class="logo-img" src="https://cdn.glitch.com/f1ca1c91-b468-4945-8b50-c6e7804ac98a%2FCAKE-03LogoFinal.PNG?v=1584838251992" alt="logo">
+        <img class="home-image-head" src="https://cdn.glitch.com/f1ca1c91-b468-4945-8b50-c6e7804ac98a%2FPastelPortadaCakesByMavis.jpg?v=1583010926612" alt="Cake with Sunflower">
+    </header>     
+    <nav>
+      <ul> 
+        <li> <a href="index.html">Home</a></li> 
+        <li><a href="cakes.html">Cakes</a></li>  
+        <li><a href="contactus.html">Contact Us</a></li> 
+      </ul>
+    </nav>
+    <main>
+      <div class="contactus-grid">
+        <section>
+          <h6 class="contactus-paragraph-1">
+          We design cakes with inspire shapes complementing your special ocation</h6> 
+          <p>just let us know in the comment box what is that you are looking for <br>and we will get back to you as soon as posible.</p> 
+        </section>  
+      </div>
+    </main>
+    <form action="/my-handling-form-page" method="post">
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+        </li>
+        <li>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="user_mail">
+        </li>
+        <li>
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message"></textarea>
+        </li>
+        <li>
+          <label for="date">Date of event: </label>
+          <input type="date of event" id="date" name="date-of-event">
+        </li>
+        <li>
+        <label for="flavor">Let us know the flavor you whant</label>
+        <input typre="Let us know the flavor you whant" id="flavor" name="Let us know the flavor you whant">
+        <p>
+          If you whant we can sugest some flavors
+        </p>
+        </li>
+      </ul>
+      <li class="button">
+        <button type="submit">Send your message</button>
+      </li> 
+    </form>
+    <div id="feedback"></div>
+    <script>
+      // get the feedback div element so we can do something with it.
+      const feedbackElement = document.getElementById('feedback');
+      // get the form so we can read what was entered in it.
+      const formElement = document.forms[0];
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+      formElement.addEventListener('submit', function(e) {
+      // stop the form from doing the default action
+      e.preventDefault();
+      // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+      feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+      // make the feedback element visible.
+      feedbackElement.style.display = "block";
+      // add a class to move everything down so our message doesn't cover it.
+      document.body.classList.toggle('moveDown');
+      });
+    </script>   
+   
+    <footer>
+      <p class="info" style="font-size: 12px; line-height: 1.25em;">&copy;2020 Cake's by Mavia • Indira Estrada • WDD130-section 6 <br>
+        We reserve the right to choose the client and project we work on.
+      </p>
+      <div class="social ">
+        <a class="socialmedia" target="_blank" href="//www.facebook.com"><img class="icon" src="https://cdn.glitch.com/f1ca1c91-b468-4945-8b50-c6e7804ac98a%2Ffb_logo.png?v=1582844859050" alt="facebook"></a>
+        <a class="socialmedia" target="_blank" href="//www.instagram.com"><img  class="icon" src="https://cdn.glitch.com/f1ca1c91-b468-4945-8b50-c6e7804ac98a%2Fgsmarena_001_instagram_logo_square.jpg?v=1582844885199" alt="instagram"></a> 
+        <a class="socialmedia" target="_blank"  href="//www.pinterest.com"><img  class="icon" src="https://cdn.glitch.com/f1ca1c91-b468-4945-8b50-c6e7804ac98a%2FPinterest-square-logo.jpg?v=1582844870701" alt="pinterest"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>     
+    
+    
+   
